@@ -76,7 +76,7 @@ public class Racun {
         System.out.println("Dobrodosli , " + imeKorisnika);
         System.out.println("Vas korisnicki ID: " + idBrojKorisnika);
         System.out.println();
-        System.out.println("Sta želite da uradite?");
+        System.out.println("Sta zelite da uradite?");
         System.out.println();
         System.out.println("1. Stanje na racunu");
         System.out.println("2. Uplata novca na racun");
