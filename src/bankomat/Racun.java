@@ -19,15 +19,15 @@ public class Racun {
 
     // Konstruktor klase
 
-    Racun(String imeK, String idBrK){
+    Racun(String imeK, String idBrK) {
         imeKorisnika = imeK;
         idBrojKorisnika = idBrK;
     }
 
     // Funkcija za uplatu sredstva na racun
 
-    void uplataNaRacun(int kolicinaNovca){
-        if (kolicinaNovca != 0){
+    void uplataNaRacun(int kolicinaNovca) {
+        if (kolicinaNovca != 0) {
             stanjeNaRacunu = stanjeNaRacunu + kolicinaNovca;
             prethodnaTransakcija = kolicinaNovca;
 
@@ -37,29 +37,27 @@ public class Racun {
     // Funkcija za podizanje sredstva sa racuna
 
     void podizanjeSaRacuna(int kolicinaNovca){
-        if (kolicinaNovca != 0){
+        if (kolicinaNovca != 0) {
             stanjeNaRacunu = stanjeNaRacunu - kolicinaNovca;
             prethodnaTransakcija = -kolicinaNovca;
-
         }
     }
 
     // Funkcija za prikazivanje prethodne transakcije
 
-    void prikaziPrethodnuTransakciju(){
-        if (prethodnaTransakcija > 0){
+    void prikaziPrethodnuTransakciju() {
+        if (prethodnaTransakcija > 0) {
             System.out.println("Prethodna uplata na racun: " + prethodnaTransakcija);
         } else if (prethodnaTransakcija < 0) {
             System.out.println("Prethodno podignut novac sa racuna: " + Math.abs(prethodnaTransakcija));
-
-
-        }else {
+        } else {
             System.out.println("Transakcija se nije izvrsila");
         }
     }
 
     // Funkcija za racunanje kamatne stope nakon n broja godina
-    void izracunatiKamatnuStopu(int godine){
+    
+    void izracunatiKamatnuStopu(int godine) {
 
         double kamatnaStopa = 0.150;
         double novoStanjeNaRacunu = (stanjeNaRacunu * kamatnaStopa * godine) + stanjeNaRacunu;
@@ -70,7 +68,7 @@ public class Racun {
 
     // Funkcija za prikazivanje glavnog menija
 
-    void prikazatiMeni(){
+    void prikazatiMeni() {
         char opcija = '\0';
         Scanner scanner = new Scanner(System.in);
         System.out.println("Dobrodosli , " + imeKorisnika);
@@ -92,7 +90,7 @@ public class Racun {
             opcija = Character.toUpperCase(opcija1);
             System.out.println();
 
-            switch (opcija){
+            switch (opcija) {
 
                 // Izbor 1 omogucava korisniku da proveri stanje na racunu
 
@@ -106,7 +104,7 @@ public class Racun {
                     // Izbor 2 omogucava korisniku da uplati novac na racun
 
                 case '2':
-                    System.out.println("Unesite kolicinu novca koju uplacujete: ");
+                    System.out.println("Unesite iznos novca kojiu placujete: ");
                     int kolicinaNovca = scanner.nextInt();
                     uplataNaRacun(kolicinaNovca);
                     System.out.println();
@@ -152,10 +150,9 @@ public class Racun {
             }
 
 
-        }while (opcija != '6');
+        } while (opcija != '6');
             System.out.println("Hvala na poverenju!");
         }
-
 
     }
 
