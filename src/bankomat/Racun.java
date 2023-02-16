@@ -71,7 +71,7 @@ public class Racun {
     void prikazatiMeni() {
         char opcija = '\0';
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Dobrodosli , " + imeKorisnika);
+        System.out.println("Dobrodosli " + imeKorisnika);
         System.out.println("Vas korisnicki ID: " + idBrojKorisnika);
         System.out.println();
         System.out.println("Sta zelite da uradite?");
