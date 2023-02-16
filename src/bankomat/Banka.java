@@ -24,7 +24,7 @@ public class Banka {
             pinKod = sca.nextInt();
             
             if (pinKod == pin) {
-                System.out.println("Dobrodosli, validacija PIN kod-a uspesna");
+                System.out.println("Validacija PIN kod-a uspesna");
                 Racun Milan = new Racun("Milan", "CT2588741");
                 Milan.prikazatiMeni();
                 break;
