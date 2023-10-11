@@ -7,11 +7,10 @@ package bankomat;
 import java.util.Scanner;
 
 /**
- *
  * @author pc
  */
 public class Racun {
-    
+
     int stanjeNaRacunu;
     int prethodnaTransakcija;
     String imeKorisnika;
@@ -36,7 +35,7 @@ public class Racun {
 
     // Funkcija za podizanje sredstva sa racuna
 
-    void podizanjeSaRacuna(int kolicinaNovca){
+    void podizanjeSaRacuna(int kolicinaNovca) {
         if (kolicinaNovca != 0) {
             stanjeNaRacunu = stanjeNaRacunu - kolicinaNovca;
             prethodnaTransakcija = -kolicinaNovca;
@@ -56,7 +55,7 @@ public class Racun {
     }
 
     // Funkcija za racunanje kamatne stope nakon n broja godina
-    
+
     void izracunatiKamatnuStopu(int godine) {
 
         double kamatnaStopa = 0.150;
@@ -101,7 +100,7 @@ public class Racun {
                     System.out.println();
                     break;
 
-                    // Izbor 2 omogucava korisniku da uplati novac na racun
+                // Izbor 2 omogucava korisniku da uplati novac na racun
 
                 case '2':
                     System.out.println("Unesite iznos novca kojiu placujete: ");
@@ -110,7 +109,7 @@ public class Racun {
                     System.out.println();
                     break;
 
-                    // Izbor 3 omogucava korisniku da podigne novac sa racuna
+                // Izbor 3 omogucava korisniku da podigne novac sa racuna
 
                 case '3':
                     System.out.println("Unesite iznos novca koji zelite da podignete: ");
@@ -119,7 +118,7 @@ public class Racun {
                     System.out.println();
                     break;
 
-                    // Izbor 4 omogucava korisniku da pogleda svoju prethodnu transakciju
+                // Izbor 4 omogucava korisniku da pogleda svoju prethodnu transakciju
 
                 case '4':
                     System.out.println("=================================");
@@ -128,7 +127,7 @@ public class Racun {
                     System.out.println();
                     break;
 
-                    // Izbor 5 omogucava korisniku da izracuna kamatnu stopu nakon n broja godina
+                // Izbor 5 omogucava korisniku da izracuna kamatnu stopu nakon n broja godina
 
                 case '5':
                     System.out.println("Unesite za koliko godina zelite da izracunate kamatnu stopu: ");
@@ -136,13 +135,13 @@ public class Racun {
                     izracunatiKamatnuStopu(brojGodina);
                     break;
 
-                    // Izbor 6 omogucava korisniku da izadje iz menija
+                // Izbor 6 omogucava korisniku da izadje iz menija
 
                 case '6':
                     System.out.println("=================================");
                     break;
 
-                    // Default koji obavestava korisnika o gresci o unosu
+                // Default koji obavestava korisnika o gresci o unosu
 
                 default:
                     System.out.println("Doslo je do greske. Molimo unesite opciju od 1 - 6");
@@ -151,12 +150,8 @@ public class Racun {
 
 
         } while (opcija != '6');
-            System.out.println("Hvala na poverenju!");
-        }
-
+        System.out.println("Hvala na poverenju!");
     }
 
+}
     
-    
-    
-
